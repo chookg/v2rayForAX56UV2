@@ -12,17 +12,15 @@
 
 ![打开ssh](https://wx1.sinaimg.cn/large/001T3Wrcly1gureyy8x5bj60qq0ar0wl02.jpg)
 
-3、格式化jffs分区
+3、清空所有数据（包括上网账号，请做好备份）
 
 ```
 ssh admin@192.168.1.1 -p 10690
 ```
 
 ```
-rm -rf /jffs/.asusrouter /jffs/.koolshare/
-rm -rf /jffs/*
-jffsinit.sh
-df -h
+kill -9 $(pidof skipd)
+rm -rf .[a-zA-Z_]* *
 reboot
 ```
 4、等待路由器重启

@@ -15,7 +15,7 @@
 3、清空所有数据（包括上网账号，请做好备份）
 
 ```
-ssh admin@192.168.1.1 -p 10690
+ssh admin@192.168.50.1 -p 10690
 ```
 
 ```
@@ -28,7 +28,7 @@ reboot
 5、cmd + n 新开终端，上传shadowsocks目录，admin是你路由器用户名， -P是你设置的ssh端口号，非mac用户可以用sftp软件
 
 ```
-scp -P 10690 -r /Users/yourpath/Downloads/shadowsocks admin@192.168.1.1:/tmp/
+scp -P 10690 -r /Users/yourpath/Downloads/shadowsocks admin@192.168.50.1:/tmp/
 ```
 
 6、进入ss目录，更改install.sh执行权限，安装
